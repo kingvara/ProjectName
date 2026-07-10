@@ -12,7 +12,7 @@ public class ProjectName {
 
   public static void main(String[] args) {
 
-        /*int countdown = 3;
+       int countdown = 3;
         while (countdown>0){
             System.out.println(countdown);
             countdown --;
@@ -22,11 +22,11 @@ public class ProjectName {
         while(i<8){
             System.out.println("This is existed");
         }/* */
-        for (int i=1; i<=3; i++) {
+        /*for (int i=1; i<=3; i++) {
             for(int j=1; j<=3; j++){
                 System.out.print(i * j + " ");
             }
-            System.out.println();
+            System.out.println();/* */
         }
     }
-}
+
