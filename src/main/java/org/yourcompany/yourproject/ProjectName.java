@@ -4,6 +4,11 @@
 
 package org.yourcompany.yourproject;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 /**
  *
  * @author varaprasath.s
@@ -13,7 +18,7 @@ public class ProjectName {
     /*Loop Statements */
   public static void main(String[] args) {
 
-       int countdown = 3;
+       /*int countdown = 3;
         while (countdown>0){
             System.out.println(countdown);
             countdown --;
@@ -28,6 +33,26 @@ public class ProjectName {
                 System.out.print(i * j + " ");
             }
             System.out.println();/* */
-        }
+       /*  int [] MyNum = {0,1,2,3};
+        for(int i=0; i <= MyNum.length; i++){
+            for(int j=0; j <= MyNum.length; j++){
+                System.out.print(MyNum [i * j ]);
+            }
+            System.out.println();
+        }/* */
+    
+        WebDriverManager.chromedriver().setup();
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://www.google.com");
+
+        System.out.println(driver.getTitle());
+
+        driver.quit();
+
     }
 
+}
+       
+    
