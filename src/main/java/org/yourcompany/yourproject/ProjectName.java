@@ -79,33 +79,7 @@ public class ProjectName {
 
          //driver.findElement(By.id("username"));*/
 
-    //CORE application login page
-
-        WebDriver driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-
-        driver.get("https://uat.coreretirementsolutions.com/");
-        Thread.sleep(5000);
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-        WebElement email =
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("Input_Email")));
-
-        email.clear();
-        email.sendKeys("varaprasath.s@cspl.com");
-
-        WebElement password =
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("passwordInput")));
-
-        password.clear();
-        password.sendKeys("Vara@161820");
-
-        wait.until(ExpectedConditions.elementToBeClickable(
-        By.xpath("//button[contains(text(),'Log in')]")))
-        .click();
-        
+    //CORE application login page  
     }
 
 }
