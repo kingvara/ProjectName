@@ -5,9 +5,14 @@
 package org.yourcompany.yourproject;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 /**
  *
@@ -16,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class ProjectName {
 
     /*Loop Statements */
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Throwable {
 
        /*int countdown = 3;
         while (countdown>0){
@@ -41,16 +46,66 @@ public class ProjectName {
             System.out.println();
         }/* */
     
-        WebDriverManager.chromedriver().setup();
+    //Trainn Application Login Code
+
+        /*WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get("https://app.trainn.co/login");
+        Thread.sleep(5000);
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+        WebElement email = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//input[@placeholder='Enter your work email']")));
+                email.sendKeys("varaprasath.s@cspl.com");
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//button[contains(text(),'Log in using email')]")))
+                .click();
+        WebElement password = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("input[type='password']")));
+                password.sendKeys("Vara@1620");
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//button[contains(.,'Login')]")))
+                .click();
+
+        //driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
+
+         //driver.quit();
+
+         //driver.findElement(By.id("username"));*/
+
+    //CORE application login page
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.google.com");
+        driver.manage().window().maximize();
 
-        System.out.println(driver.getTitle());
+        driver.get("https://uat.coreretirementsolutions.com/");
+        Thread.sleep(5000);
 
-        driver.quit();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
+        WebElement email =
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("Input_Email")));
+
+        email.clear();
+        email.sendKeys("varaprasath.s@cspl.com");
+
+        WebElement password =
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("passwordInput")));
+
+        password.clear();
+        password.sendKeys("Vara@161820");
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+        By.xpath("//button[contains(text(),'Log in')]")))
+        .click();
+        
     }
 
 }
